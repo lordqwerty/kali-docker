@@ -1,0 +1,8 @@
+FROM kalilinux/kali-rolling
+MAINTAINER Jorden Whitefield <jorden.whitefield@googlemail.com>
+
+RUN apt update && \
+        DEBIAN_FRONTEND=noninteractive apt upgrade -y && \
+        DEBIAN_FRONTEND=noninteractive apt install kali-linux-everything -y && \
+        apt autoremove -y && \
+        apt autoclean -y
