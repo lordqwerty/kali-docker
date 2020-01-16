@@ -52,4 +52,9 @@ at run time. For example, if you wanted to use GPU acceleration then:
 ```bash
 $ make run USER_OPTS="-d /dev/dri"
 ```
+Screenshot
+----------
 
+![screenshot][screenshot]
+
+[screenshot]: screenshot.png
