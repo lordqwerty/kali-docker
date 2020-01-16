@@ -42,3 +42,14 @@ Details about each of the metapackages can be seen on the
 Once your container is built in the future you can execute `make run` to
 launch the container. Note that if you want to update the container you'll need
 to rebuild the image.
+
+Run time customisations
+-----------------------
+
+If you're running Linux you can additionally map in drivers to a Docker Container
+at run time. For example, if you wanted to use GPU acceleration then:
+
+```bash
+$ make run USER_OPTS="-d /dev/dri"
+```
+

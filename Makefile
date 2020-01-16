@@ -4,6 +4,7 @@ DOCKERFILE ?= Dockerfile
 DOCKERFILE_V ?= $(DOCKERFILE).$(META_VERSION)
 VOLUME ?= $(HOME)/kali
 IP ?= $(shell ipconfig getifaddr en0)
+USER_OPTS ?=
 
 default: run
 
@@ -27,6 +28,7 @@ run:
 		--privileged \
 		-v /tmp/.X11-unix:/tmp/.X11-unix \
 		-v $(VOLUME):/kali \
+		$(USER_OPTS) \
 		-it $(KALI_VERSION) /bin/bash
 
 
